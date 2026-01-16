@@ -43,8 +43,6 @@ class VidozaExtractor(BaseExtractor):
         if not html:
             raise ExtractorError("VIDOZA: Empty HTML")
 
-        # ❌ DO NOT ACCESS response.cookies (HttpResponse has none)
-
         # 2) Extract video URL
         pattern = re.compile(
             r"""
